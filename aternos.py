@@ -23,7 +23,7 @@ def connect():
   
   element = driver.find_element_by_id('password')
   element.send_keys(PASSWORD)
-  if VERBOSE: print('Password:', ('*' * len(password)))
+  if VERBOSE: print('Password:', ('*' * len(PASSWORD)))
   
   element = driver.find_element_by_id('login')
   element.click()
