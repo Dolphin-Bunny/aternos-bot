@@ -43,13 +43,13 @@ def player_count():
   return driver.find_element_by_class_name('statusplayerbadge').get_attribute('innerHTML')
 
 def start():
-  if status() == 'Offline':
+  if status().strip() == 'Offline':
     element = driver.find_element_by_id('start')
     element.click()
   
     ready = False
     while not ready:  
-      if status() == 'online':
+      if status().strip() == 'Online':
         ready = True
         break
       
