@@ -1,5 +1,3 @@
-USERNAME = "USERNAME"
-PASSWORD = "PASSWORD"
 VERBOSE = True
 
 import selenium
@@ -13,7 +11,7 @@ chrome_options.add_argument('--no-sandbox')
 driver = webdriver.Chrome(executable_path='./chromedriver', chrome_options=chrome_options, service_args=["--verbose", "--log-path=/tmp/chromedriver.log"])
 driver.implicitly_wait(1)
 
-def connect():
+def connect(USERNAME, PASSWORD):
   driver.get('https://aternos.org/go')
   if VERBOSE: print('at',driver.title)
   
